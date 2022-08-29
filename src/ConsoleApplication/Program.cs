@@ -19,9 +19,14 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            var train = new Train();
+            var train = new Train("hola");
             train.StartEngines();
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!"); 
+            while (Train.GetCount()<100000000)
+            {
+                new Train("hola");
+            }
+            
         }
     }
 }
